@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Over Ons</title>
+</head>
+
+<body>
+    <nav class="bovenbalk">
+      <a href="homepage.html" style="font-size: 5em; font-family: 'Playfair Display', sans-serif; " class="logo" >Meesterproef</a>
+        <div class="nav-links">
+          <a href="homepage.html" class="nav-item">Home</a>
+          <a href="onderzoek.html" class="nav-item">Onderzoek</a>
+          <a href="bereiding.html" class="nav-item">Bereiding</a>
+          <a href="over-ons.html" class="nav-item">Over ons</a>
+          <a href="conclusie.html" class="nav-item">Conclusie</a>
+       </div>
+    </nav>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const bovenbalk = document.querySelector('.bovenbalk');
+            const logo = document.querySelector('.logo');
+
+            if (window.scrollY > 50) {
+                bovenbalk.classList.add('ingekrompen');
+                logo.style.fontSize = '3em';
+            } else {
+                bovenbalk.classList.remove('ingekrompen');
+                logo.style.fontSize = '5em';
+            }
+        });
+    </script>
+    
+    <h1 style="padding-top: 150px;">
+        <span>O</span><span>v</span><span>e</span><span>r</span><span class="space"> </span><span>o</span><span>n</span><span>s</span>
+    </h1>
+    <div class="squircle">
+        <p>
+            Eens zien of dit werkt.
+        </p>
+    </div>
+
+    <div class="onderbalk">
+        <p>
+            © 2026 Meesterproef. Alle rechten voorbehouden. <a href="mailto:diedj979@gmail.com">g3mBV</a>
+        </p>
+    </div>
+
+    <script>
+  // Zoek alle navigatielinks en het logo op
+  const navLinks = document.querySelectorAll('.nav-item, .logo');
+  const logo = document.querySelector('.logo');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+
+      const doelLocatie = this.getAttribute('href');
+
+
+      if (doelLocatie && doelLocatie !== '#') {
+
+        event.preventDefault();
+
+        logo.classList.add('draai-logo');
+
+        setTimeout(() => {
+          window.location.href = doelLocatie;
+        }, 1000); 
+      }
+    });
+  });
+</script>
+
+<script>
+  document.body.addEventListener('dblclick', (event) => {
+    const clickX = event.clientX
+    const clickY = event.clientY
+
+    for (let i = 0; i < 300; i++) {
+      createParticle(clickX, clickY);
+    }
+  });
+
+  function createParticle(x, y) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+
+    const moveX = (Math.random() - 1 ) * 3000;
+    const moveY = (Math.random() - 1 ) * 3000;
+    
+    particle.style.setProperty('--x', `${moveX}px`);
+    particle.style.setProperty('--y', `${moveY}px`);
+
+    const randomHue = Math.random() * 360;
+    particle.style.backgroundColor = `hsl(${randomHue}, 100%, 80%)`;
+
+    document.body.appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 3000);
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Bio-ethanol uit mandarijn | Meesterproef</title>
+    <meta name="description" content="Is het mogelijk om bio-ethanol te produceren uit mandarijnen? Bekijk ons onderzoek, het bereidingsproces en de conclusie van deze meesterproef.">
+    <meta name="google-site-verification" content="dkpoxqX3U9dstRT2QyaaFXYJEp5-pPPV3NxngQa6ikA" />
+</head>
+
+<body>
+    <nav class="bovenbalk">
+      <a href="homepage.html" style="font-size: 5em; font-family: 'Playfair Display', sans-serif; " class="logo" >Meesterproef</a>
+        <div class="nav-links">
+          <a href="homepage.html" class="nav-item">Home</a>
+          <a href="onderzoek.html" class="nav-item">Onderzoek</a>
+          <a href="bereiding.html" class="nav-item">Bereiding</a>
+          <a href="over-ons.html" class="nav-item">Over ons</a>
+          <a href="conclusie.html" class="nav-item">Conclusie</a>
+       </div>
+    </nav>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const bovenbalk = document.querySelector('.bovenbalk');
+            const logo = document.querySelector('.logo');
+
+            if (window.scrollY > 50) {
+                bovenbalk.classList.add('ingekrompen');
+                logo.style.fontSize = '3em';
+            } else {
+                bovenbalk.classList.remove('ingekrompen');
+                logo.style.fontSize = '5em';
+            }
+        });
+    </script>
+
+    <h1 style="padding-top: 150px;">
+        <span>B</span><span>i</span><span>o</span><span>-</span><span>E</span><span>t</span><span>h</span><span>a</span><span>n</span><span>o</span><span>l</span><span class="space"> </span><span>u</span><span>i</span><span>t</span><span class="space"> </span><span>m</span><span>a</span><span>n</span><span>d</span><span>a</span><span>r</span><span>i</span><span>j</span><span>n</span><span>?</span>
+    </h1>
+
+    <div class="squircle" style="margin-top: 50px;">
+        Bij deze module hebben wij (meer over ons bij "over ons") onderzocht of wij bio-ethanol kunnen maken uit mandarijn. Ga met ons mee en ontdek wat je wel, en juist niet moet doen.
+    </div>
+
+<p>
+        <br>
+        <br>
+        <br>
+        <br>
+</p>
+
+    <div class="grid" >
+        <a class="grid-item" href="onderzoek.html">
+            <h2>Onderzoek</h2>
+        </a>
+        <a class="grid-item" href="bereiding.html">
+            <h2>Bereiding</h2>
+        </a>
+        <a class="grid-item" href="over-ons.html">
+            <h2>Over ons</h2>
+        </a>
+        <a class="grid-item" href="conclusie.html">
+            <h2>Conclusie</h2>
+        </a>
+    </div>
+
+    <div class="container" style="border-top-width: 5px; border-top-color: grey; border-top-style: solid;">
+        <h1>Bio-ethanol uit fruit</h1>
+        <p>Lorem Ipsum</p>
+    </div>
+    <div class="container">
+        <h2>Informatie</h2>
+    </div>
+    <div class="container-informatie">
+        <a class="informatie" href="#"><img src="https://picsum.photos/366/206">
+        <h2>Lorem</h2>
+        <p>lorem</p>
+        </a>
+        <a class="informatie" href="#"><img src="https://picsum.photos/368/206">
+        <h2>ipsum</h2>
+        <p>ipsum</p>
+        </a>
+        <a class="informatie" href="#"><img src="https://picsum.photos/367/206">
+        <h2>dolet</h2>
+        <p>dolet</p>
+        </a>
+    </div>
+
+    <div class="onderbalk">
+        <p>
+            © 2026 Meesterproef. Alle rechten voorbehouden. <a href="mailto:diedj979@gmail.com">g3mBV</a>
+        </p>
+    </div>
+
+    <script>
+  // Zoek alle navigatielinks en het logo op
+  const navLinks = document.querySelectorAll('.nav-item, .logo');
+  const logo = document.querySelector('.logo');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      // Haal de link (URL) op waar de bezoeker heen wil
+      const doelLocatie = this.getAttribute('href');
+
+      // Als de link ergens heen gaat (en geen lege '#' is)
+      if (doelLocatie && doelLocatie !== '#') {
+        // 1. Stop tijdelijk het direct doorsturen naar de volgende pagina
+        event.preventDefault();
+
+        // 2. Voeg de CSS-klasse toe waardoor het logo gaat draaien
+        logo.classList.add('draai-logo');
+
+        // 3. Wacht tot de animatie klaar is (600 milliseconden = 0.6s) en ga dan pas door
+        setTimeout(() => {
+          window.location.href = doelLocatie;
+        }, 1000); 
+      }
+    });
+  });
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker geregistreerd met scope:', registration.scope);
+        })
+        .catch(error => {
+          console.error('Service Worker registratie mislukt:', error);
+        });
+    }); // Het missende haakje ) is hier toegevoegd
+  }
+</script>
+
+</body>
+</html>

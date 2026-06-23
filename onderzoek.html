@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Onderzoek</title>
+</head>
+
+<body>
+    <nav class="bovenbalk">
+      <a href="homepage.html" style="font-size: 5em; font-family: 'Playfair Display', sans-serif; " class="logo" >Meesterproef</a>
+        <div class="nav-links">
+          <a href="homepage.html" class="nav-item">Home</a>
+          <a href="onderzoek.html" class="nav-item">Onderzoek</a>
+          <a href="bereiding.html" class="nav-item">Bereiding</a>
+          <a href="over-ons.html" class="nav-item">Over ons</a>
+          <a href="conclusie.html" class="nav-item">Conclusie</a>
+       </div>
+    </nav>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const bovenbalk = document.querySelector('.bovenbalk');
+            const logo = document.querySelector('.logo');
+
+            if (window.scrollY > 50) {
+                bovenbalk.classList.add('ingekrompen');
+                logo.style.fontSize = '3em';
+            } else {
+                bovenbalk.classList.remove('ingekrompen');
+                logo.style.fontSize = '5em';
+            }
+        });
+    </script>
+
+    <h1 style="padding-top: 150px;">
+        <span>O</span><span>n</span><span>d</span><span>e</span><span>r</span><span>z</span><span>o</span><span>e</span><span>k</span>
+    </h1>
+
+    <div class="squircle">
+        <p>
+            In dit gedeelte van onze meesterproef gaan we dieper in op het onderzoek dat we hebben gedaan naar het maken van bio-ethanol uit mandarijn. We zullen de stappen bespreken die we hebben genomen, de fouten die we hebben gemaakt en wat we hebben geleerd van deze fouten.
+        </p>
+    </div>
+
+    <div class="ingewikkelde-lijst-wrapper">
+          <div class="ingewikkelde-lijst">
+            <div class="ingewikkelde-lijst-links">links1</div>
+            <div class="ingewikkelde-lijst-rechts">rechts1</div>
+            <div class="ingewikkelde-lijst-links">links2</div>
+            <div class="ingewikkelde-lijst-rechts">rechts2</div>
+            <div class="ingewikkelde-lijst-links">links3</div>
+            <div class="ingewikkelde-lijst-rechts">rechts3</div>
+            <div class="ingewikkelde-lijst-links">links4</div>
+            <div class="ingewikkelde-lijst-rechts">rechts4</div>
+            <div class="ingewikkelde-lijst-links">links5</div>
+            <div class="ingewikkelde-lijst-rechts">rechts5</div>
+          </div>
+
+          <div class="ingewikkelde-lijst">
+            <div class="ingewikkelde-lijst-links">links1</div>
+            <div class="ingewikkelde-lijst-rechts">rechts1</div>
+            <div class="ingewikkelde-lijst-links">links2</div>
+            <div class="ingewikkelde-lijst-rechts">rechts2</div>
+            <div class="ingewikkelde-lijst-links">links3</div>
+            <div class="ingewikkelde-lijst-rechts">rechts3</div>
+            <div class="ingewikkelde-lijst-links">links4</div>
+            <div class="ingewikkelde-lijst-rechts">rechts4</div>
+            <div class="ingewikkelde-lijst-links">links5</div>
+            <div class="ingewikkelde-lijst-rechts">rechts5</div>
+          </div>
+    </div>
+
+
+
+    <div class="onderbalk">
+        <p>
+            © 2026 Meesterproef. Alle rechten voorbehouden. <a href="mailto:diedj979@gmail.com">g3mBV</a>
+        </p>
+    </div>
+
+    <script>
+  // Zoek alle navigatielinks en het logo op
+  const navLinks = document.querySelectorAll('.nav-item, .logo');
+  const logo = document.querySelector('.logo');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      // Haal de link (URL) op waar de bezoeker heen wil
+      const doelLocatie = this.getAttribute('href');
+
+      // Als de link ergens heen gaat (en geen lege '#' is)
+      if (doelLocatie && doelLocatie !== '#') {
+        // 1. Stop tijdelijk het direct doorsturen naar de volgende pagina
+        event.preventDefault();
+
+        // 2. Voeg de CSS-klasse toe waardoor het logo gaat draaien
+        logo.classList.add('draai-logo');
+
+        // 3. Wacht tot de animatie klaar is (600 milliseconden = 0.6s) en ga dan pas door
+        setTimeout(() => {
+          window.location.href = doelLocatie;
+        }, 1000); 
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
