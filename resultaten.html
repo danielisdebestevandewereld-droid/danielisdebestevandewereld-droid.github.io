@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resultaten van het bio-ethanol onderzoek met mandarijn. Inclusief grafiek, conclusie, methoden, fouten, en aanbevelingen voor schoolprojecten.">
+  <meta name="keywords" content="bio-ethanol, onderzoek, resultaten, mandarijn, GCI, onderzoeksvraag, schoolproject, meesterproef, proefverslag, chemie, biobrandstof, alcoholproductie, duurzaamheid, labwerk, experiment, datavisualisatie, grafiek, analyse, fouten, methoden, conclusie, vergelijking, veiligheid">
+  <meta name="author" content="g3mBV">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2ecc71">
+  <link rel="canonical" href="https://example.com/resultaten.html">
+  <meta property="og:title" content="Resultaten - Bio-ethanol Onderzoek | Meesterproef">
+  <meta property="og:description" content="Bekijk het volledige resultaat van ons bio-ethanol schoolproject: methoden, grafiek, conclusie, fouten en verbeteringen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/resultaten.html">
+  <meta property="og:site_name" content="Meesterproef">
+  <meta property="og:locale" content="nl_NL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Resultaten - Bio-ethanol Onderzoek | Meesterproef">
+  <meta name="twitter:description" content="Onderzoeksresultaten van bio-ethanol productie uit fruit, inclusief grafieken, foutenanalyse en conclusies voor je meesterproef.">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍊</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Resultaten - Bio-ethanol Onderzoek | Meesterproef</title>
+</head>
+
+<body style="height:2500px">
+    <nav class="bovenbalk">
+      <a href="index.html" style="font-size: 5em; font-family: 'Playfair Display', sans-serif; " class="logo" >Meesterproef</a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="onderzoek.html" class="nav-item">Onderzoek</a>
+          <a href="bereiding.html" class="nav-item">Bereiding</a>
+          <a href="over-ons.html" class="nav-item">Over ons</a>
+          <a href="resultaten.html" class="nav-item">Conclusie</a>
+       </div>
+    </nav>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const bovenbalk = document.querySelector('.bovenbalk');
+      const logo = document.querySelector('.logo');
+
+      if (window.scrollY > 50) {
+        bovenbalk.classList.add('ingekrompen');
+        logo.style.fontSize = '3em';
+      } else {
+        bovenbalk.classList.remove('ingekrompen');
+        logo.style.fontSize = '5em';
+      }
+    });
+  </script>
+
+  <h1 style="padding-top: 150px;" id="conclusie-section">
+    Conclusie: Bio-ethanol Productie uit Fruit
+  </h1>
+
+  <div class="squircle">
+    <p>
+      Na het doorlopen van alle stappen en het maken van vele fouten zijn we erachter gekomen dat het mogelijk is om
+      bio-ethonol te maken uit een mandarijn. Door onze fouten, is het jammer genoeg niet gelukt om de bio-ethanol ook
+      te testen op brandbaarheid aangezien er water bij was gekomen die het vuur doofde voordat de bio-ethanol vlam kon
+      vatten.
+    </p>
+  </div>
+
+
+  <div style="max-width: 600px; margin: 50px auto;">
+    <canvas id="mijnGrafiek"></canvas>
+  </div>
+
+  <div class="print-download-bar print-hidden">
+    <button class="download-btn" onclick="downloadGrafiek()">📥 Download Grafiek (PNG)</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Afdrukken / PDF</button>
+  </div>
+
+  <div class="squircle">
+    <p>
+      Hierboven is een grafiek te zien van de hoeveelheid bio-ethanol die wij hebben gemaakt uit onze mandarijn. Zoals
+      te zien is, is er een piek in de hoeveelheid ethanol na 4 minuten. Dit komt omdat de ethanol tijdens de GCI (Gas
+      Chromatography) er ongeveer 4 minuten over doet om door de buis te gaan. De kleine piekjes ervoor komen doordat
+      sommige stoffen sneller gaan dan anderen en dus eerder aankomen.
+    </p>
+  </div>
+
+  <div class="container" style="border-top-width: 5px; border-top-color: grey; border-top-style: solid;">
+    <h1>Fouten</h1>
+  </div> 
+
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Fout 1: Verkeerde fruitsoort</h3>
+      <p>Voor het maken van de ethanol hebben we suikers nodig die de gist kan omzetten. Die suikers wilden we uit een stuk fruit halen. Hiervoor zijn druiven meestal het beste omdat zij het hoogste percentage suikers bevatten. 
+        <br> Helaas waren wij vergeten om zelf fruit mee te nemen. Gelukkig had een ander groepje genoeg fruit en mochten we een mandarijn hebben. Het is niet optimaal, maar het is niet anders. 
+      </p>
+    </div>
+    <div class="grid-item">
+      <h3>Fout 2: te lang wachten</h3>
+      <p>Na lang werken konden we eindelijk de alcohol gaan destilleren. We hadden de opstelling klaargezet en konden hem aanzetten. We hadden afgesproken dat Jesse de wacht zou houden. 
+        <br> Maar helaas, het ging mis. Het is goed om te weten dat Alcohol verdampt bij 78°C en water bij 100°C. Om de alcohol te verdampen moest de temperatuur dus daarbinnen blijven.
+        <br> Doordat de temperatuur te hoog ging, ging ook het water verdampen. Nu hadden we dus alcohol en water bij elkaar, en dat brand niet. We hebben het nog 2x vaker geprobeerd maar het lukte ons niet om nog meer zuivere alcohol eruit te krijgen: De proef was mislukt.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="container" style="border-top-width: 5px; border-top-color: grey; border-top-style: solid;">
+      <h1>Percentage Alcohol</h1>
+    </div>
+
+    <div class="onderzoek">
+      <h3>Resultaten &amp; Berekening Alcoholgehalte</h3>
+
+      <p>De uiteindelijke oppervlakte van de piek is uitgerekend met de trapeziumregel en aangepast om te matchen met de 0.20 als 0-lijn. De uiteindelijke oppervlakte van de vergelijkingslijn is: <strong>1,513 V·min</strong> en de oppervlakte van onze eigen alcohol is: <strong>0,211 V·min</strong>.</p>
+
+      <p>Om mee te vergelijken, is Navimer consumptie-alcohol gebruikt (herkenbaar aan de kenmerkende vierkante, bruine glazen fles). Navimer heeft een percentage van 96% alcohol. Met deze info kan je een vergelijkingstabel maken, en met kruisproducten kom je uiteindelijk erachter dat:</p>
+
+      <div class="formule">
+        Alcoholpercentage = (0,211 V·min / 1,513 V·min) × 96% = 13,4%
+      </div>
+
+      <p>In normale mensentaal: Onze eigen mandarijnen-cocktail bevatte <strong>13,4%</strong> alcohol. Dit is het beste wat we hadden kunnen verwachten van dit experiment, aangezien de gistcellen niet heel veel meer aankunnen dan 14% alcohol. Bij 15% alcohol of meer sterven ze gewoon van hun eigen productie, daarom moet je deze proef nooit langer dan een week laten duren.</p>
+    </div>
+  </div>
+
+
+  <div class="onderbalk">
+    <p>
+      © 2026 Meesterproef. Alle rechten voorbehouden. <a href="mailto:diedj979@gmail.com">g3mBV</a>
+    </p>
+  </div>
+
+  <script>
+    // Download grafiek als PNG
+    function downloadGrafiek() {
+      const canvas = document.getElementById('mijnGrafiek');
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/png');
+      link.download = 'bio-ethanol-resultaten-' + new Date().toISOString().split('T')[0] + '.png';
+      link.click();
+    }
+
+    // Zoek het canvas-element op in de HTML
+    const ctx = document.getElementById('mijnGrafiek').getContext('2d');
+
+    console.log(typeof Chart);
+
+    // Maak de nieuwe interactieve grafiek aan
+    const mijnGrafiek = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [0, 0.4, 0.8, 1.2, 1.6, 2.0, 2.4, 2.8, 3.2, 3.6, 4.0, 4.4, 4.8, 5.2, 5.6, 6.0, 6.4, 6.8, 7.2, 7.6, 8.0],
+        datasets: [{
+          label: 'Hoeveelheid gemaakte alcohol',
+          data: [0.18, 0.18, 0.21, 0.18, 0.18, 0.19, 0.19, 0.18, 0.18, 0.18, 0.18, 0.25, 0.27, 0.265, 0.24, 0.23, 0.225, 0.22, 0.21, 0.21, 0.20],
+          backgroundColor: 'rgba(46, 204, 113, 0.2)',
+          borderColor: 'rgba(46, 204, 113, 1)',
+          borderWidth: 4,
+          tension: 0.4,
+          pointRadius: 0,
+        }]
+      },
+
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Bio-ethanol Hoeveelheid (ml) over Tijd (minuten)',
+            font: { size: 14, weight: 'bold' }
+          },
+          legend: {
+            display: true,
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            max: 0.40,
+            title: { display: true, text: 'Hoeveelheid (ml)' }
+          },
+          x: {
+            title: { display: true, text: 'Tijd (minuten)' }
+          }
+        }
+      }
+    });
+  </script>
+
+
+
+  <script>
+    // Zoek alle navigatielinks en het logo op
+    const navLinks = document.querySelectorAll('.nav-item, .logo');
+    const logo = document.querySelector('.logo');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (event) {
+        // Haal de link (URL) op waar de bezoeker heen wil
+        const doelLocatie = this.getAttribute('href');
+
+        // Als de link ergens heen gaat (en geen lege '#' is)
+        if (doelLocatie && doelLocatie !== '#') {
+          // 1. Stop tijdelijk het direct doorsturen naar de volgende pagina
+          event.preventDefault();
+
+          // 2. Voeg de CSS-klasse toe waardoor het logo gaat draaien
+          logo.classList.add('draai-logo');
+
+          // 3. Wacht tot de animatie klaar is (600 milliseconden = 0.6s) en ga dan pas door
+          setTimeout(() => {
+            window.location.href = doelLocatie;
+          }, 1000);
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
