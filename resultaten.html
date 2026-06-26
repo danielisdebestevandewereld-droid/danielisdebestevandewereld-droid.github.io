@@ -10,11 +10,11 @@
   <meta name="author" content="g3mBV">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#2ecc71">
-  <link rel="canonical" href="https://example.com/resultaten.html">
+  <link rel="canonical" href="https://meesterproef.github.io/resultaten.html">
   <meta property="og:title" content="Resultaten - Bio-ethanol Onderzoek | Meesterproef">
   <meta property="og:description" content="Bekijk het volledige resultaat van ons bio-ethanol schoolproject: methoden, grafiek, conclusie, fouten en verbeteringen.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/resultaten.html">
+  <meta property="og:url" content="https://meesterproef.github.io/resultaten.html">
   <meta property="og:site_name" content="Meesterproef">
   <meta property="og:locale" content="nl_NL">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   <title>Resultaten - Bio-ethanol Onderzoek | Meesterproef</title>
 </head>
 
-<body style="height:2500px">
+<body style="height:100000px">
     <nav class="bovenbalk">
       <a href="index.html" style="font-size: 5em; font-family: 'Playfair Display', sans-serif; " class="logo" >Meesterproef</a>
         <div class="nav-links">
@@ -54,7 +54,7 @@
   </script>
 
   <h1 style="padding-top: 150px;" id="conclusie-section">
-    Conclusie: Bio-ethanol Productie uit Fruit
+    Conclusie
   </h1>
 
   <div class="squircle">
@@ -67,7 +67,7 @@
   </div>
 
 
-  <div style="max-width: 600px; margin: 50px auto;">
+  <div style="max-width: 1200px; margin: 50px auto;">
     <canvas id="mijnGrafiek"></canvas>
   </div>
 
@@ -122,6 +122,49 @@
       </div>
 
       <p>In normale mensentaal: Onze eigen mandarijnen-cocktail bevatte <strong>13,4%</strong> alcohol. Dit is het beste wat we hadden kunnen verwachten van dit experiment, aangezien de gistcellen niet heel veel meer aankunnen dan 14% alcohol. Bij 15% alcohol of meer sterven ze gewoon van hun eigen productie, daarom moet je deze proef nooit langer dan een week laten duren.</p>
+      <p>In onze mandarijn zat ongeveer 30 g aan glucose, fructose en andere suikers. Dus bij 100 gram: </p>
+      <div class="formule">
+        (13,39%)/30*100=44.6333
+      </div>
+      <p>Dit is bijna het optimaal als je bedenkt dat in theorie er maximaal 51% kan onstaan.</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="container" style="border-top-width: 5px; border-top-color: grey; border-top-style: solid;">
+      <h1>Theoretisch</h1>
+    </div>
+
+    <div class="onderzoek">
+      <h3>Hoeveel er in de theorie had kunnen ontstaan.</h3>
+
+      <p>We hebben uitgerekend hoeveel er in de theorie had kunnen ontstaan. Allereerst hebben we de reactievergelijking:</p>
+
+      <div class="formule">
+        C6H12O6 -> 2C2H6O+2CO2
+      </div>
+
+      <p>
+        Als je de Massa's uitrekent kom je uit op:
+      </p>
+
+      <div class="formule">
+        180,156 -> 92,136 + 88,02
+      </div>
+
+      <p>
+        Je wilt alleen weten hoeveel glucose hoeveel alcohol maakt, dus je neemt de glucose en de alcohol, die zet je in een verhoudingstabel en daarna kan je uitrekenen dat:
+      </p>
+
+      <div class="formule">
+        (92,136/180,156)×100=51,142% 
+      </div>
+
+      <p>
+        dus er kan maximaal 51,142 gram ethanol uit 100 gram glucose ontstaan.
+      </p>
+
+      <p></p>
     </div>
   </div>
 
@@ -160,7 +203,17 @@
           borderWidth: 4,
           tension: 0.4,
           pointRadius: 0,
-        }]
+        },
+        {
+          label: "Vergelijkingslijn",
+          data: [0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.90, 0.92, 0.77, 0.65, 0.54, 0.47, 0.44, 0.41, 0.38, 0.36, 0.34, 0.33],
+          backgroundColor: 'rgba(46, 100, 113, 0.2)',
+          borderColor:  'rgba(40, 100, 118, 1)',
+          borderWidth: 4,
+          tension: 0.3,
+          pointRadius: 0,
+        }
+        ]
       },
 
       options: {
@@ -179,7 +232,7 @@
         scales: {
           y: {
             beginAtZero: false,
-            max: 0.40,
+            max: 1,
             title: { display: true, text: 'Hoeveelheid (ml)' }
           },
           x: {
